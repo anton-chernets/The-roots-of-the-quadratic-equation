@@ -1,7 +1,16 @@
+/**
+ * Function for economical calculation of the roots of the quadratic equation
+ *
+ * @author Anton Chernets
+ */
+ 
 public static double[] Square(double a, double b, double c) {
+
         double squareUrav[];
         double d;
+        
         d = b * b - 4 * a * c;
+        
         if (d > 0) {
             squareUrav = new double[2];
             squareUrav[0] = (-b - Math.sqrt(d)) / (2 * a);
@@ -12,9 +21,11 @@ public static double[] Square(double a, double b, double c) {
             squareUrav = new double[1];
             squareUrav[0] = -b / (2 * a);
             return squareUrav;
+            
         } else {
             squareUrav = new double[0];
             return squareUrav;
+            
         }
     }
 }
